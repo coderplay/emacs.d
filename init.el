@@ -136,6 +136,7 @@
 (require 'init-local nil t)
 
 
+
 ;;----------------------------------------------------------------------------
 ;; Locales (setting them earlier in this file doesn't work in X)
 ;;----------------------------------------------------------------------------
@@ -153,3 +154,15 @@
 ;; coding: utf-8
 ;; no-byte-compile: t
 ;; End:
+
+
+(require 'init-helm)
+(require 'init-helm-gtags)
+(require 'init-projectile)
+(require 'init-company)
+(require 'init-rust)
+
+
+;; 
+
+
