@@ -10,7 +10,7 @@
 ;; Reduce the number of characters before company kicks in
 (setq company-minimum-prefix-length 1)
 
-(setq company-backends (delete 'company-semantic company-backends))
+;; (setq company-backends (delete 'company-etags company-backends))
 ;; (define-key c-mode-map  [(tab)] 'company-complete)
 ;; (define-key c++-mode-map  [(tab)] 'company-complete)
 

@@ -9,34 +9,34 @@
 (add-to-list 'auto-mode-alist '("\\.rs\\'" . rust-mode))
 
 ;; Set path to racer binary
-(setq racer-cmd "/Users/mzhou/.cargo/bin/racer")
+;; (setq racer-cmd "/Users/mzhou/.cargo/bin/racer")
 
-;; Set path to rust src directory
-(setq racer-rust-src-path "/Users/mzhou/code/rust/src")
+;; ;; Set path to rust src directory
+;; (setq racer-rust-src-path "/Users/mzhou/code/rust/src")
 
 (remove-hook 'rust-mode-hook nil)
 
 (add-hook 'rust-mode-hook
 
           '(lambda ()
-             ;; Enable racer
-             (racer-activate)
+             ;; ;; Enable racer
+             ;; (racer-activate)
 
-             ;; Hook in racer with eldoc to provide documentation
-             (racer-turn-on-eldoc)
+             ;; ;; Hook in racer with eldoc to provide documentation
+             ;; (racer-turn-on-eldoc)
 
              (helm-gtags-mode 1)
 
              ;; Use flycheck-rust in rust-mode
              (add-hook 'flycheck-mode-hook #'flycheck-rust-setup)
 
-             ;; Use company-racer in rust mode
-             (set (make-local-variable 'company-backends) '(company-racer, company-gtags))
+             ;; ;; Use company-racer in rust mode
+             ; (set (make-local-variable 'company-backends) '(company-gtags, company-racer))
 
-             ;; Key binding to jump to method definition
+             ;; ;; Key binding to jump to method definition
              ;; (local-set-key (kbd "M-.") #'racer-find-definition)
 
-             ;; Key binding to auto complete and indent
+             ;; ;; Key binding to auto complete and indent
              ;; (local-set-key (kbd "TAB") #'racer-complete-or-indent)
              ))
 
